@@ -1,0 +1,28 @@
+from selenium import webdriver
+from constant import APP_URL
+import time
+browser = webdriver.Chrome("C:\SE\chromedriver.exe")
+from selenium.webdriver.support.select import Select
+time.sleep(2)
+browser.maximize_window()
+browser.get(f'{APP_URL}/login')
+time.sleep(2)
+browser.find_element_by_name("email").send_keys("super@skylarksoft.com")
+time.sleep(2)
+browser.find_element_by_name("password").send_keys("Staging!Er$#P@2021")
+time.sleep(2)
+browser.find_element_by_name("login").click()
+time.sleep(2)
+browser.find_element_by_xpath("(//span[@class='nav-text'][contains(.,'Marketing')])[1]").click()
+time.sleep(2)
+browser.find_element_by_xpath("//span[@class='nav-text'][contains(.,'Sales Target Determination')]").click()
+time.sleep(2)
+browser.find_element_by_xpath("(//i[contains(@class,'fa fa-edit')])[2]").click()
+time.sleep(2)
+a1 = Select(browser.find_element_by_xpath("//select[@id='buying_agent_id']"))
+a1.select_by_index(3)
+time.sleep(2)
+browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+time.sleep(2)
+browser.find_element_by_xpath("//button[contains(.,'Update')]").click()
+time.sleep(2)
