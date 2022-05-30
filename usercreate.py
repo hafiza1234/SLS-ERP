@@ -18,7 +18,7 @@ browser.click()
 time.sleep(2)
 browser.find_element_by_xpath("(//span[@class='nav-text'])[686]").click()
 time.sleep(4)
-button = browser.find_element_by_xpath("//a[contains(.,'New User')]");
-button.click();
+browser.find_element_by_xpath("//a[contains(.,'New User')]").click()
+time.sleep(2)
 
 
