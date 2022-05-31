@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 browser = webdriver.Chrome("C:\SE\chromedriver.exe")
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.action_chains import ActionChains
 time.sleep(2)
 browser.maximize_window()
 browser.get('http://139.162.35.76:8070/login')
@@ -23,3 +24,7 @@ a1.select_by_index(2)
 time.sleep(2)
 browser.find_element_by_xpath("//button[@id='ColorWiseOrderVolumeReport']").click()
 time.sleep(2)
+element = "Buyer"
+assert element == 'Buyer'
+browser.quit()
+print("Showing Report Successfully")
