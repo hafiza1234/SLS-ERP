@@ -41,3 +41,5 @@ browser.find_element_by_xpath("//input[@id='confirm_password']").send_keys("1234
 time.sleep(2)
 browser.find_element_by_xpath("//textarea[@id='address']").send_keys("Mirpur")
 time.sleep(2)
+browser.find_element_by_xpath("//button[contains(.,'Create')]").click()
+time.sleep(2)
