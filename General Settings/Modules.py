@@ -2,6 +2,8 @@ from selenium import webdriver
 import time
 browser = webdriver.Chrome("C:\SE\chromedriver.exe")
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 time.sleep(2)
 browser.maximize_window()
 browser.get('http://139.162.35.76:8070/login')
@@ -12,13 +14,11 @@ browser.find_element_by_name("password").send_keys("Staging!Er$#P@2021")
 time.sleep(2)
 browser.find_element_by_name("login").click()
 time.sleep(2)
-browser.find_element_by_xpath("(//span[@class='nav-text'][contains(.,'Marketing')])[1]").click()
+browser.find_element_by_xpath("(//span[contains(.,'General Settings')])[1]").click()
 time.sleep(2)
-browser.find_element_by_xpath("//span[contains(.,'Quotation Inquiry')]").click()
+browser.find_element_by_xpath("(//span[contains(.,'Modules')])[2]").click()
 time.sleep(2)
-a1 = Select(browser.find_element_by_name("search_column"))
-a1.select_by_index(3)
-browser.find_element_by_xpath("//input[@name='q']").send_keys("Warehouse")
-time.sleep(3)
-browser.find_element_by_xpath("(//button[@type='submit'])[2]").click()
+browser.find_element_by_xpath("//input[contains(@id,'name')]").send_keys("Booking")
+time.sleep(2)
+browser.find_element_by_xpath("//button[@id='submit']").click()
 time.sleep(2)

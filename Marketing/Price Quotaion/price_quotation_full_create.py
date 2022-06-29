@@ -195,5 +195,3 @@ time.sleep(2)
 browser.find_element_by_xpath("//button[contains(.,'Submit')]").click()
 time.sleep(3)
 
-
-

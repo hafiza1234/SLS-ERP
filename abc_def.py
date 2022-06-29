@@ -53,7 +53,6 @@ a = browser.find_element_by_xpath("//input[@name='fab_cost']")
 action = ActionChains(browser)
 action.double_click(a).perform()
 time.sleep(3)
-
 a5 = Select(browser.find_element_by_id("color_type_id"))
 a5.select_by_index(1)
 time.sleep(2)
